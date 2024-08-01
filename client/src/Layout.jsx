@@ -3,7 +3,7 @@ import { Link, Outlet } from 'react-router-dom'
 import AskQuestion from './pages/AskQuestion'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import SignUp from './pages/Signup'
+import SignUp from './pages/SignupPage'
 import { UserContext } from './context/UserContext'
 import LoginPage from './pages/LoginPage';
 

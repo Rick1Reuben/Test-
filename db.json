@@ -1,0 +1,83 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John",
+      "email": "john@example.com",
+      "password": "123",
+      "profile_image": "http://example.com/profile/johndoe.jpg",
+      "phone_number": "07123456789"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "password": "password456",
+      "profile_image": "http://example.com/profile/janesmith.jpg",
+      "phone_number": "07198765432"
+    },
+    {
+      "id": "f55d",
+      "email": "john@example.com",
+      "password": "12345"
+    },
+    {
+      "id": "60c4",
+      "email": "john@example.com",
+      "password": "12345"
+    },
+    {
+      "id": "1e46",
+      "name": "max",
+      "email": "max@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "d180",
+      "name": "max",
+      "email": "max@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "8ff3",
+      "name": "max",
+      "email": "max@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "ee23",
+      "name": "max",
+      "email": "max@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "e33c",
+      "name": "max",
+      "email": "max@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "38f5",
+      "name": "sam",
+      "email": "sam@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "3ba4",
+      "email": "sam@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "c65d",
+      "name": "cynthia",
+      "email": "cynthia@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "627f",
+      "name": "cynthia",
+      "email": "cynthia@gmail.com",
+      "password": "123"
+    }
+  ]
+}

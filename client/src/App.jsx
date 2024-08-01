@@ -11,7 +11,7 @@ import AdminLogin from './pages/AdminLogin';
 import NoPage from './pages/NoPage';
 import Question from './pages/Question';
 import UpdateQuestion from './pages/UpdateQuestion';
-import Signup from './pages/Signup';
+import Signup from './pages/SignupPage';
 import LoginPage from './pages/LoginPage';
 import { UserProvider } from './context/UserContext';
 
