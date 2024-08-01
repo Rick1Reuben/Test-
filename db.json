@@ -78,6 +78,80 @@
       "name": "cynthia",
       "email": "cynthia@gmail.com",
       "password": "123"
+    },
+    {
+      "id": "e5be",
+      "name": "Ezekiel",
+      "email": "Ezekiel@gmail.com",
+      "password": "1245"
+    },
+    {
+      "id": "78c7",
+      "name": "red",
+      "email": "red@gmail.com",
+      "password": "qwer"
+    },
+    {
+      "id": "af96",
+      "name": "red",
+      "email": "red@gmail.com",
+      "password": "qwer"
+    },
+    {
+      "id": "244e",
+      "name": "red",
+      "email": "red@gmail.com",
+      "password": "qwer"
+    },
+    {
+      "id": "dfcb",
+      "name": "red",
+      "email": "red@gmail.com",
+      "password": "qwer"
+    },
+    {
+      "id": "0d2d",
+      "name": "cat",
+      "email": "cat@gmail.com",
+      "password": "qaz"
+    },
+    {
+      "id": "e93d",
+      "email": "max@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "0770",
+      "email": "max@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "57bc",
+      "email": "max@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "4fe3",
+      "email": "max@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "e9ec",
+      "name": "kfc",
+      "email": "kfc@gmail.com",
+      "password": "qaws"
+    },
+    {
+      "id": "e06d",
+      "email": "kfc@gmail.com",
+      "password": "qaws"
+    },
+    {
+      "id": "c676",
+      "title": "tyfytf",
+      "content": "kjlnkljn",
+      "author": "max",
+      "comments": ["cvgvukvukyguiyuv"]
     }
   ]
 }
