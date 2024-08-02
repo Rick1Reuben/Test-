@@ -10,6 +10,7 @@ import LayoutAdmin from './LayoutAdmin';
 import AdminLogin from './pages/AdminLogin';
 import NoPage from './pages/NoPage';
 import Question from './pages/Question';
+import UserProfile from './pages/UserProfile';
 import UpdateQuestion from './pages/UpdateQuestion';
 import Signup from './pages/SignupPage';
 import LoginPage from './pages/LoginPage';
@@ -28,6 +29,7 @@ function App() {
         <Route path='/Signup' element={<Signup />} />
         <Route path='/LoginPage' element={<LoginPage />} />
         <Route path='/Question/:id' element={<Question />} />
+        <Route path="/Profile" element={<UserProfile />} />
         <Route path='/update/:post_id' element={<UpdateQuestion />} />
         <Route path="*" element={<NoPage />} />
       </Route>
@@ -39,4 +41,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
