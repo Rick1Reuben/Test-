@@ -31,7 +31,7 @@ const LoginPage = () => {
       // Displaying results to console
       .then((data) => {
         localStorage.setItem("access_token", data.access_token);
-        navigate("/");
+        navigate("/Profile");
       });
 
     // Assuming the login is successful, navigate to the home page

@@ -9,7 +9,7 @@ export default function Home()
   const [posts, setPosts] = useState([])
 
   useEffect(()=>{
-    fetch("http://localhost:3000/users")
+    fetch("Don't place a url here!!")
     .then((res)=>res.json())
     .then((data)=>{
        setPosts(data)

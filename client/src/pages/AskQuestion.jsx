@@ -11,7 +11,7 @@ export default function AskQuestion() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:3000/users', {
+    fetch('http://localhost:3000/questions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

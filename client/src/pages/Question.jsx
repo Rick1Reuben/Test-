@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import Post from '../components/Post';
 
-const Question = () => {
+const Questions = () => {
   const [questions, setQuestions] = useState([]);
 
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch('http://localhost:3000/users');
+        const response = await fetch('http://localhost:3000/questions');
         const data = await response.json();
         setQuestions(data);
       } catch (error) {
@@ -19,17 +20,14 @@ const Question = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Questions</h1>
-      <ul>
+      <h1 className="text-3xl font-bold mb-6 text-center">Questions</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {questions.map((question) => (
-          <li key={question.id} className="mb-4 p-4 border-b border-gray-200">
-            <h2 className="text-xl font-semibold">{question.title}</h2>
-            <p className="text-gray-700">{question.body}</p>
-          </li>
+          <Post key={question.id} post={question} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
 
-export default Question;
+export default Questions;

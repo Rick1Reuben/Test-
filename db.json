@@ -33,211 +33,82 @@
       "password": "1234"
     },
     {
-      "id": "d180",
-      "name": "max",
-      "email": "max@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "8ff3",
-      "name": "max",
-      "email": "max@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "ee23",
-      "name": "max",
-      "email": "max@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "e33c",
-      "name": "max",
+      "id": "4c2f",
       "email": "max@gmail.com",
       "password": "1234"
     },
     {
-      "id": "38f5",
-      "name": "sam",
-      "email": "sam@gmail.com",
-      "password": "12345"
-    },
-    {
-      "id": "3ba4",
-      "email": "sam@gmail.com",
-      "password": "12345"
-    },
-    {
-      "id": "c65d",
-      "name": "cynthia",
-      "email": "cynthia@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "627f",
-      "name": "cynthia",
-      "email": "cynthia@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "e5be",
-      "name": "Ezekiel",
-      "email": "Ezekiel@gmail.com",
-      "password": "1245"
-    },
-    {
-      "id": "78c7",
-      "name": "red",
-      "email": "red@gmail.com",
-      "password": "qwer"
-    },
-    {
-      "id": "af96",
-      "name": "red",
-      "email": "red@gmail.com",
-      "password": "qwer"
-    },
-    {
-      "id": "244e",
-      "name": "red",
-      "email": "red@gmail.com",
-      "password": "qwer"
-    },
-    {
-      "id": "dfcb",
-      "name": "red",
-      "email": "red@gmail.com",
-      "password": "qwer"
-    },
-    {
-      "id": "0d2d",
-      "name": "cat",
-      "email": "cat@gmail.com",
-      "password": "qaz"
-    },
-    {
-      "id": "e93d",
-      "email": "max@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "0770",
-      "email": "max@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "57bc",
-      "email": "max@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "4fe3",
-      "email": "max@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "e9ec",
-      "name": "kfc",
-      "email": "kfc@gmail.com",
-      "password": "qaws"
-    },
-    {
-      "id": "e06d",
-      "email": "kfc@gmail.com",
-      "password": "qaws"
-    },
-    {
-      "id": "c676",
-      "title": "tyfytf",
-      "content": "kjlnkljn",
-      "author": "max",
-      "comments": [
-        "cvgvukvukyguiyuv"
-      ]
-    },
-    {
-      "id": "5354",
-      "name": "g",
-      "email": "g@gmail.com",
-      "password": "123qw"
-    },
-    {
-      "id": "8611",
-      "email": "g@gmail.com",
-      "password": "123qw"
-    },
-    {
-      "id": "0d2d",
-      "title": "tyfduf",
-      "content": "kygiuo",
-      "author": "ben",
+      "id": "3746",
+      "title": "auilUGEVIQUeg",
+      "content": "wduvi",
+      "author": "wdugv",
       "comments": []
     },
     {
-      "id": "3f80",
-      "name": "max",
-      "email": "max@gmail.com",
-      "password": "1235"
-    },
-    {
-      "id": "1c30",
-      "email": "max@gmail.com",
-      "password": "1235"
-    },
-    {
-      "id": "369a",
-      "email": "max@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "9814",
-      "email": "max@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "e522",
-      "email": "max@gmail.com",
-      "password": "gt"
-    },
-    {
-      "id": "8468",
-      "title": "zdvs",
-      "content": "sedfgvsdb",
-      "author": "ryktuk",
-      "comments": []
-    },
-    {
-      "id": "5bf4",
-      "name": "scd ",
-      "email": "rickr6129@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "3362",
-      "email": "max@gmail.com",
-      "password": "wer"
-    },
-    {
-      "id": "e5b2",
-      "name": "max",
-      "email": "max@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "e833",
-      "email": "max@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "2870",
+      "id": "0df7",
       "name": "Rick Ruben",
-      "email": "max@gmail.com",
-      "password": "123"
+      "email": "rickr6129@gmail.com",
+      "password": "12"
     },
     {
-      "id": "3949",
+      "id": "64ef",
       "email": "max@gmail.com",
       "password": "1"
+    },
+    {
+      "id": "0f5b",
+      "name": "Rick Ruben",
+      "email": "max@gmail.com",
+      "password": "1"
+    },
+    {
+      "id": "9051",
+      "email": "max@gmail.com",
+      "password": "22"
+    }
+  ],
+  "questions": [
+    {
+      "id": "1",
+      "title": "What is React?",
+      "content": "React is a JavaScript library for building user interfaces.",
+      "author": "Alice",
+      "comments": []
+    },
+    {
+      "id": "2",
+      "title": "How to use useState in React?",
+      "content": "The useState hook allows you to add state to functional components.",
+      "author": "Bob",
+      "comments": []
+    },
+    {
+      "id": "3",
+      "title": "What is the use of useEffect in React?",
+      "content": "The useEffect hook allows you to perform side effects in functional components.",
+      "author": "Charlie",
+      "comments": []
+    },
+    {
+      "id": "4",
+      "title": "What is Frontend coding ?",
+      "content": "The useEffect hook allows you to perform side effects in functional components.",
+      "author": "Charlie",
+      "comments": []
+    },
+    {
+      "id": "f47a",
+      "title": "dvawdfasdf",
+      "content": "asrvqe",
+      "author": "wrvqer",
+      "comments": []
+    },
+    {
+      "id": "53c5",
+      "title": "touch on the profile",
+      "content": "add a profile image and any other tweeks you think are needed",
+      "author": "Reuben",
+      "comments": []
     }
   ]
 }

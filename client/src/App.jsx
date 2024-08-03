@@ -28,7 +28,7 @@ function App() {
         <Route path='/AskQuestion' element={<AskQuestion />} />
         <Route path='/Signup' element={<Signup />} />
         <Route path='/LoginPage' element={<LoginPage />} />
-        <Route path='/Question/:id' element={<Question />} />
+        <Route path='/Questions' element={<Question />} />
         <Route path="/Profile" element={<UserProfile />} />
         <Route path='/update/:post_id' element={<UpdateQuestion />} />
         <Route path="*" element={<NoPage />} />
