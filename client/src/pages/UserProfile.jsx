@@ -1,40 +1,122 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect, useContext } from "react";
+import { toast } from "react-toastify";
+import { UserContext } from "../context/UserContext";
 
-const Profile = ({ userId }) => {
-  const [user, setUser] = useState(null);
+const UserProfile = () => {
+  const [currentUser, setCurrentUser] = useState(null);
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+    profile_image: "",
+  });
 
   useEffect(() => {
-    const fetchUserProfile = async () => {
+    const fetchCurrentUser = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/users`);
+        const response = await fetch("http://localhost:3000/users", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        if (!response.ok) {
+          throw new Error("Failed to fetch current user");
+        }
         const data = await response.json();
-        setUser(data);
+        setCurrentUser(data);
+        setFormData({
+          username: data.username || "",
+          password: data.password || "",
+          profile_image: data.profile_image || "",
+        });
       } catch (error) {
-        console.error('Error fetching user profile:', error);
+        console.error("Error fetching current user:", error);
+        toast.error("Failed to fetch current user");
       }
     };
 
-    fetchUserProfile();
-  }, [userId]);
+    fetchCurrentUser();
+  }, []);
 
-  if (!user) {
-    return <div>Loading...</div>;
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch(`http://localhost:5000/api/current_user/${currentUser.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: formData.username,
+          password: formData.password,
+          profile_image: formData.profile_image,
+        }),
+      });
+      if (!response.ok) {
+        throw new Error("Failed to update profile");
+      }
+      const data = await response.json();
+      toast.success(data.success);
+      setCurrentUser((prevUser) => ({
+        ...prevUser,
+        username: formData.username || prevUser.username,
+        password: formData.password || prevUser.password,
+        profile_image: formData.profile_image || prevUser.profile_image,
+      }));
+    } catch (error) {
+      console.error("Error updating profile:", error);
+      toast.error("Failed to update profile");
+    }
+  };
+
+  if (!currentUser) {
+    return <div>Log in to view your profile</div>;
   }
 
+  const { username, password, profile_image } = formData;
+
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6 text-center">User Profile</h1>
-      <div className="flex items-center mb-4 bg-white p-6 rounded-lg shadow-md">
-        <img src={user.profile_image} alt={`${user.name}'s profile`} className="w-24 h-24 rounded-full mr-6" />
-        <div>
-          <h2 className="text-2xl font-semibold mb-2">{user.name}</h2>
-          <p className="text-gray-700 text-lg">{user.email}</p>
-          <p className="text-gray-700 text-lg">{user.phone_number}</p>
-          <span className="inline-block bg-blue-500 text-white text-sm px-3 py-1 rounded-full mt-2">{user.badge}</span>
-        </div>
+    <div>
+      <h2>Profile</h2>
+      <div className="rounded-full">
+        <img src={formData.profile_image} alt="profile" className="size-2 rounded-full" />
       </div>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <h5>Username</h5>
+        <input
+          type="text"
+          name="username"
+          value={username}
+          onChange={handleChange}
+          placeholder="Username"
+          required
+        />
+        <h5>Password</h5>
+        <input
+          type="password"
+          name="password"
+          value={password}
+          onChange={handleChange}
+          placeholder="Password"
+          required
+        />
+        <h5>Image URL</h5>
+        <input
+          type="text"
+          name="profile_image"
+          value={profile_image}
+          onChange={handleChange}
+          placeholder="Profile Image URL"
+        />
+        <button type="submit">Update Profile</button>
+      </form>
     </div>
   );
 };
 
-export default Profile;
+export default UserProfile;

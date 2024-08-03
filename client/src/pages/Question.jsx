@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Post from '../components/Post';
+import { useNavigate } from "react-router-dom";
 
 const Questions = () => {
   const [questions, setQuestions] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -18,12 +20,18 @@ const Questions = () => {
     fetchQuestions();
   }, []);
 
+  const handlePostClick = (id) => {
+    navigate(`/UpdateQuestion`);
+  };
+
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-6 text-center">Questions</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {questions.map((question) => (
-          <Post key={question.id} post={question} />
+          <div key={question.id} onClick={() => handlePostClick(question.id)}>
+            <Post post={question} />
+          </div>
         ))}
       </div>
     </div>

@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { v4 as uuidv4 } from 'uuid';
 
 
-export default function UpdateBlog() 
+export default function UpdateQuestion() 
 {
   const nav = useNavigate()
   const [title, setTitle] = useState()
@@ -12,11 +12,11 @@ export default function UpdateBlog()
   const [author, setAuthor] = useState()
   const [content, setContent] = useState()
 
-  const {post_id} = useParams()
+  const {questions_id} = useParams()
 
 
   useEffect(()=>{
-    fetch(`http://localhost:3000/posts/${post_id}`)
+    fetch(`http://localhost:3000/questions/${questions_id}`)
     .then((res)=>res.json())
     .then((data)=>{
        setTitle(data.title)
@@ -24,14 +24,14 @@ export default function UpdateBlog()
        setContent(data.content)
       
     })
-  }, [post_id])
+  }, [questions_id])
 
 
   // Update
   function handleSubmit(e){
     e.preventDefault()
 
-    fetch(`http://localhost:3000/posts/${post_id}`, {
+    fetch(`http://localhost:3000/questions/${questions_id}`, {
       method: 'PATCH',
       body: JSON.stringify({
         title: title,
@@ -45,14 +45,14 @@ export default function UpdateBlog()
   .then((response) => response.json())
   .then((res) =>{
     nav("/")
-    toast.success("Post Updated successfully")
+    toast.success("questions Updated successfully")
   });
 
   }
   return (
     <div className='grid grid-cols-2 h-[80vh] mt-6'>
       <div className='bg-gray-800 text-white flex justify-center items-center'>
-        <h1 className='text-6xl font-bold'>Update Question {post_id}</h1>
+        <h1 className='text-6xl font-bold'>Update Question {questions_id}</h1>
       </div>
       <div className='p-6 '>
         <h1 className='text-center font-semibold text-2xl'>Update Question</h1>
@@ -72,7 +72,7 @@ export default function UpdateBlog()
             <input value={author} onChange={(e)=> setAuthor(e.target.value)} type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required />
           </div>
           <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Update Post
+            Update questions
           </button>
 
         </form>

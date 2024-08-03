@@ -26,7 +26,7 @@ export default function AskQuestion() {
       .then((response) => response.json())
       .then(() => {
         toast.success('Question submitted successfully!');
-        navigate('/');
+        navigate('/Questions');
       })
       .catch((error) => {
         toast.error('Failed to submit the question.');

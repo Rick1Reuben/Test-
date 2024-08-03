@@ -7,6 +7,8 @@ const SignupPage = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [name, setName] = useState("");
+  const [profileImage, setProfileImage] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -18,26 +20,31 @@ const SignupPage = () => {
     }
 
     fetch("http://localhost:3000/users", {
-      // Adding method type
       method: "POST",
-
-      // Adding body or contents to send
       body: JSON.stringify({
-        name: name,
-        email: email,
-        password: password,
+        name,
+        email,
+        password,
+        profile_image: profileImage,
+        phone_number: phoneNumber,
       }),
-
-      // Adding headers to the request
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
     })
-      // Converting to JSON
-      .then((response) => response.json())
-
-      // Displaying results to consol
-      .then((json) => navigate("/LoginPage"));
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        toast.success("Signup successful!");
+        navigate("/LoginPage");
+      })
+      .catch((error) => {
+        toast.error("Signup failed: " + error.message);
+      });
   };
 
   return (
@@ -93,7 +100,7 @@ const SignupPage = () => {
               required
             />
           </div>
-          <div className="mb-6">
+          <div className="mb-4">
             <label
               htmlFor="confirmPassword"
               className="block text-sm font-medium text-gray-700"
@@ -107,6 +114,36 @@ const SignupPage = () => {
               onChange={(e) => setConfirmPassword(e.target.value)}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               required
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="profileImage"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Profile Image URL
+            </label>
+            <input
+              type="text"
+              id="profileImage"
+              value={profileImage}
+              onChange={(e) => setProfileImage(e.target.value)}
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="phoneNumber"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Phone Number
+            </label>
+            <input
+              type="text"
+              id="phoneNumber"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             />
           </div>
           <button

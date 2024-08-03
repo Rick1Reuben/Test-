@@ -17,54 +17,9 @@
       "phone_number": "07198765432"
     },
     {
-      "id": "f55d",
-      "email": "john@example.com",
-      "password": "12345"
-    },
-    {
-      "id": "60c4",
-      "email": "john@example.com",
-      "password": "12345"
-    },
-    {
-      "id": "1e46",
-      "name": "max",
-      "email": "max@gmail.com",
+      "id": "9e4e",
+      "email": "Kinuthia@gmail.com",
       "password": "1234"
-    },
-    {
-      "id": "4c2f",
-      "email": "max@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "3746",
-      "title": "auilUGEVIQUeg",
-      "content": "wduvi",
-      "author": "wdugv",
-      "comments": []
-    },
-    {
-      "id": "0df7",
-      "name": "Rick Ruben",
-      "email": "rickr6129@gmail.com",
-      "password": "12"
-    },
-    {
-      "id": "64ef",
-      "email": "max@gmail.com",
-      "password": "1"
-    },
-    {
-      "id": "0f5b",
-      "name": "Rick Ruben",
-      "email": "max@gmail.com",
-      "password": "1"
-    },
-    {
-      "id": "9051",
-      "email": "max@gmail.com",
-      "password": "22"
     }
   ],
   "questions": [
@@ -108,6 +63,20 @@
       "title": "touch on the profile",
       "content": "add a profile image and any other tweeks you think are needed",
       "author": "Reuben",
+      "comments": []
+    },
+    {
+      "id": "deec",
+      "title": "javascript",
+      "content": "what is an arrow function",
+      "author": "Ezekiel",
+      "comments": []
+    },
+    {
+      "id": "b803",
+      "title": "wdvef",
+      "content": "efverfbw",
+      "author": "ebwefb",
       "comments": []
     }
   ]
