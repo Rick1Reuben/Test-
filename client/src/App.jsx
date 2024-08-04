@@ -30,7 +30,7 @@ function App() {
         <Route path='/LoginPage' element={<LoginPage />} />
         <Route path='/Questions' element={<Question />} />
         <Route path="/Profile" element={<UserProfile />} />
-        <Route path='/update/:post_id' element={<UpdateQuestion />} />
+        <Route path='/UpdateQuestion/:id' element={<UpdateQuestion />} />
         <Route path="*" element={<NoPage />} />
       </Route>
       <Route path='/admin/' element={<LayoutAdmin/>}>

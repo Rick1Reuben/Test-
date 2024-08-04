@@ -21,7 +21,7 @@ const Questions = () => {
   }, []);
 
   const handlePostClick = (id) => {
-    navigate(`/UpdateQuestion`);
+    navigate(`/UpdateQuestion/${id}`);
   };
 
   return (

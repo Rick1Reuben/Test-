@@ -46,7 +46,7 @@ const UserProfile = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:5000/api/current_user/${currentUser.id}`, {
+      const response = await fetch(`http://localhost:3000/users?ids${Userids.join(',')}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
